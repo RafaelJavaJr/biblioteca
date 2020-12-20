@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Biblioteca</title>
 <link rel="stylesheet" href="bootstrap.min.css" />
 </head>
 <body>
@@ -17,16 +17,16 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.html">eLibrary</a>
+				<a class="navbar-brand" href="index.html">Biblioteca</a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="index.html" class="active">Home</a></li>
-					<li><a href="#">Admin</a></li>
-					<li><a href="#">Librarian</a></li>
+					<li><a href="index.html" class="active">Início</a></li>
+					<li><a href="#">Administrador</a></li>
+					<li><a href="#">Bibliotecário</a></li>
 				</ul>
 
 			</div>
@@ -36,35 +36,35 @@
 	</nav>
 
 	<div class="container-fluid">
-		<h1>eLibrary</h1>
+		<h1>Biblioteca Municipal de Campo Bonito</h1>
 
 		<div class="row">
 			<div class="col-md-6">
-				<h3>Admin Login</h3>
+				<h3>Administrador</h3>
 				<form action="AdminLogin" method="post" style="width: 300px">
 					<div class="form-group">
-						<label for="email1">Email address</label> <input type="email"
+						<label for="email1">Email</label> <input type="email"
 							class="form-control" name="email" id="email1" placeholder="Email" />
 					</div>
 					<div class="form-group">
-						<label for="password1">Password</label> <input type="password"
+						<label for="password1">Senha</label> <input type="password"
 							class="form-control" name="password" id="password1"
-							placeholder="Password" />
+							placeholder="Senha" />
 					</div>
 					<button type="submit" class="btn btn-primary">Login</button>
 				</form>
 			</div>
 			<div class="col-md-6">
-				<h3>Librarian Login</h3>
+				<h3>Bibliotecário</h3>
 				<form action="LibrarianLogin" method="post" style="width: 300px">
 					<div class="form-group">
-						<label for="email1">Email address</label> <input type="email"
+						<label for="email1">Email</label> <input type="email"
 							class="form-control" id="email1" name="email" placeholder="Email" />
 					</div>
 					<div class="form-group">
-						<label for="password1">Password</label> <input type="password"
+						<label for="password1">Senha</label> <input type="password"
 							class="form-control" id="password1" name="password"
-							placeholder="Password" />
+							placeholder="Senha" />
 					</div>
 					<button type="submit" class="btn btn-primary">Login</button>
 				</form>
