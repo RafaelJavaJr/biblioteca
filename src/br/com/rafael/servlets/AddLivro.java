@@ -11,7 +11,7 @@ import java.io.PrintWriter;
 
 import br.com.rafael.beans.LivroBean;
 import br.com.rafael.dao.LivroDao;
-@WebServlet("/AddLivro")
+@WebServlet("/AddBook")
 public class AddLivro extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
