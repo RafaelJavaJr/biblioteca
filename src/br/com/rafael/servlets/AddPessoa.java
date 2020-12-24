@@ -7,35 +7,42 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class AddPessoa
- */
-@WebServlet("/AddPessoa")
+import java.io.PrintWriter;
+
+
+import br.com.rafael.beans.PessoaBean;
+import br.com.rafael.dao.PessoaDao;
+@WebServlet("/AddLibrarian")
 public class AddPessoa extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public AddPessoa() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		response.setContentType("text/html");
+		PrintWriter out=response.getWriter();
+		
+		out.print("<!DOCTYPE html>");
+		out.print("<html>");
+		out.println("<head>");
+		out.println("<title>Add Librarian</title>");
+		out.println("<link rel='stylesheet' href='bootstrap.min.css'/>");
+		out.println("</head>");
+		out.println("<body>");
+		
+		request.getRequestDispatcher("navadmin.html").include(request, response);
+		out.println("<div class='container'>");
+		
+		String nome=request.getParameter("nome");
+		String email=request.getParameter("email");
+		String senha=request.getParameter("senha");
+		String stelefone=request.getParameter("telefone");
+		long telefone=Long.parseLong(stelefone);
+		PessoaBean bean=new PessoaBean(nome, email, senha, telefone);
+		//PessoaDao.save(bean);
+		out.print("<h4>Librarian added successfully</h4>");
+		request.getRequestDispatcher("addlibrarianform.html").include(request, response);
+		
+		
+		out.println("</div>");
+		request.getRequestDispatcher("footer.html").include(request, response);
+		out.close();
 	}
 
 }
