@@ -17,14 +17,14 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.html">Biblioteca</a>
+				<a class="navbar-brand" href="index.jsp">Biblioteca</a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="index.html" class="active">Início</a></li>
+					<li><a href="index.jsp" class="active">Início</a></li>
 					<li><a href="#">Administrador</a></li>
 					<li><a href="#">Bibliotecário</a></li>
 				</ul>
