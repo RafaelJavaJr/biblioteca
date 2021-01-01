@@ -35,7 +35,7 @@ public class AddPessoa extends HttpServlet {
 		String stelefone=request.getParameter("telefone");
 		long telefone=Long.parseLong(stelefone);
 		PessoaBean bean=new PessoaBean(nome, email, senha, telefone);
-		//PessoaDao.save(bean);
+		PessoaDao.save(bean);
 		out.print("<h4>Librarian added successfully</h4>");
 		request.getRequestDispatcher("addlibrarianform.html").include(request, response);
 		
