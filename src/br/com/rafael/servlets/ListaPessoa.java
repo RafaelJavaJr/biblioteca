@@ -33,9 +33,9 @@ public class ListaPessoa extends HttpServlet {
 		List<PessoaBean> list=PessoaDao.view();
 		
 		out.println("<table class='table table-bordered table-striped'>");
-		out.println("<tr><th>Id</th><th>Name</th><th>Email</th><th>Password</th><th>Mobile</th><th>Edit</th><th>Delete</th></tr>");
+		out.println("<tr><th>Id</th><th>Nome</th><th>Email</th><th>Senha</th><th>Telefone</th><th>Editar</th><th>Deletar</th></tr>");
 		for(PessoaBean bean:list){
-			out.println("<tr><td>"+bean.getId()+"</td><td>"+bean.getNome()+"</td><td>"+bean.getEmail()+"</td><td>"+bean.getSenha()+"</td><td>"+bean.getTelefone()+"</td><td><a href='EditLibrarianForm?id="+bean.getId()+"'>Edit</a></td><td><a href='DeleteLibrarian?id="+bean.getId()+"'>Delete</a></td></tr>");
+			out.println("<tr><td>"+bean.getId()+"</td><td>"+bean.getNome()+"</td><td>"+bean.getEmail()+"</td><td>"+bean.getSenha()+"</td><td>"+bean.getTelefone()+"</td><td><a href='EditLibrarianForm?id="+bean.getId()+"'>Editar</a></td><td><a href='DeleteLibrarian?id="+bean.getId()+"'>Deletar</a></td></tr>");
 		}
 		out.println("</table>");
 		
