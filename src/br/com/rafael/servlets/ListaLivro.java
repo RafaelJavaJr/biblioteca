@@ -24,7 +24,7 @@ public class ListaLivro extends HttpServlet {
 		out.print("<!DOCTYPE html>");
 		out.print("<html>");
 		out.println("<head>");
-		out.println("<title>View Book</title>");
+		out.println("<title>Listar Livros</title>");
 		out.println("<link rel='stylesheet' href='bootstrap.min.css'/>");
 		out.println("</head>");
 		out.println("<body>");
@@ -35,7 +35,7 @@ public class ListaLivro extends HttpServlet {
 		List<LivroBean> list=LivroDao.view();
 		
 		out.println("<table class='table table-bordered table-striped'>");
-		out.println("<tr><th>Callno</th><th>Name</th><th>Author</th><th>Publisher</th><th>Quantity</th><th>Issued</th><th>Delete</th></tr>");
+		out.println("<tr><th>Registro</th><th>Nome</th><th>Autor</th><th>Editora</th><th>Quantidade</th><th>Emprestados</th><th>Deletar</th></tr>");
 		for(LivroBean bean:list){
 			out.println("<tr><td>"+bean.getRegistro()+"</td><td>"+bean.getNome()+"</td><td>"+bean.getAutor()+"</td><td>"+bean.getEditora()+"</td><td>"+bean.getQuantidade()+"</td><td>"+bean.getEmprestimo()+"</td><td><a href='DeleteLivro?registro="+bean.getRegistro()+"'>Delete</a></td></tr>");
 		}

@@ -20,7 +20,7 @@ public class AddLivro extends HttpServlet {
 		out.print("<!DOCTYPE html>");
 		out.print("<html>");
 		out.println("<head>");
-		out.println("<title>Add Book Form</title>");
+		out.println("<title>Adcionar Livro</title>");
 		out.println("<link rel='stylesheet' href='bootstrap.min.css'/>");
 		out.println("</head>");
 		out.println("<body>");
@@ -36,7 +36,7 @@ public class AddLivro extends HttpServlet {
 		LivroBean bean=new LivroBean(registro,nome,autor,editora,quantidade);
 		int i=LivroDao.save(bean);
 		if(i>0){
-			out.println("<h3>Book saved successfully</h3>");
+			out.println("<h3>Livro Salvo com Sucesso!!!</h3>");
 		}
 		request.getRequestDispatcher("addbookform.html").include(request, response);
 		out.println("</div>");

@@ -18,7 +18,7 @@ public class AdminLogin extends HttpServlet {
 		out.print("<!DOCTYPE html>");
 		out.print("<html>");
 		out.println("<head>");
-		out.println("<title>Admin Section</title>");
+		out.println("<title>Administrador</title>");
 		out.println("<link rel='stylesheet' href='bootstrap.min.css'/>");
 		out.println("</head>");
 		out.println("<body>");
@@ -35,7 +35,7 @@ public class AdminLogin extends HttpServlet {
 		}else{
 			request.getRequestDispatcher("navhome.html").include(request, response);
 			out.println("<div class='container'>");
-			out.println("<h3>Username or password error</h3>");
+			out.println("<h3>Usuário ou Senha inválido</h3>");
 			request.getRequestDispatcher("adminloginform.html").include(request, response);
 			out.println("</div>");
 		}
