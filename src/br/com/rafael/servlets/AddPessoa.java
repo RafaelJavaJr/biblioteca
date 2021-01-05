@@ -21,7 +21,7 @@ public class AddPessoa extends HttpServlet {
 		out.print("<!DOCTYPE html>");
 		out.print("<html>");
 		out.println("<head>");
-		out.println("<title>Add Librarian</title>");
+		out.println("<title>Adicionar Bibliotecário</title>");
 		out.println("<link rel='stylesheet' href='bootstrap.min.css'/>");
 		out.println("</head>");
 		out.println("<body>");

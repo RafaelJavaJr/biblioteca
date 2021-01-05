@@ -17,7 +17,7 @@ public class EmprestimoLivroForm extends HttpServlet {
 		out.print("<!DOCTYPE html>");
 		out.print("<html>");
 		out.println("<head>");
-		out.println("<title>Issue Book Form</title>");
+		out.println("<title>Empréstimo de Livros</title>");
 		out.println("<link rel='stylesheet' href='bootstrap.min.css'/>");
 		out.println("</head>");
 		out.println("<body>");

@@ -20,7 +20,7 @@ public class AddLivro extends HttpServlet {
 		out.print("<!DOCTYPE html>");
 		out.print("<html>");
 		out.println("<head>");
-		out.println("<title>Adcionar Livro</title>");
+		out.println("<title>Adicionar Livro</title>");
 		out.println("<link rel='stylesheet' href='bootstrap.min.css'/>");
 		out.println("</head>");
 		out.println("<body>");

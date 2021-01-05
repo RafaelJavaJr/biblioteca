@@ -13,8 +13,6 @@ public class DB {
 		try {
 			Class.forName("org.postgresql.Driver");
 			con = DriverManager.getConnection(banco, user, password);
-			System.out.println("Conectou");
-
 		} catch (Exception e) {
 			System.out.println(e);
 		}

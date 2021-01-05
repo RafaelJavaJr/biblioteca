@@ -21,7 +21,7 @@ public class EmprestimoLivro extends HttpServlet {
 		out.print("<!DOCTYPE html>");
 		out.print("<html>");
 		out.println("<head>");
-		out.println("<title>Add Book Form</title>");
+		out.println("<title>Adcionar Livro</title>");
 		out.println("<link rel='stylesheet' href='bootstrap.min.css'/>");
 		out.println("</head>");
 		out.println("<body>");

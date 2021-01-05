@@ -22,7 +22,7 @@ public class ListaPessoa extends HttpServlet {
 		out.print("<!DOCTYPE html>");
 		out.print("<html>");
 		out.println("<head>");
-		out.println("<title>View Librarian</title>");
+		out.println("<title>Listar Bibliotecários</title>");
 		out.println("<link rel='stylesheet' href='bootstrap.min.css'/>");
 		out.println("</head>");
 		out.println("<body>");

@@ -21,7 +21,7 @@ public class PessoaLogin extends HttpServlet {
 		out.print("<!DOCTYPE html>");
 		out.print("<html>");
 		out.println("<head>");
-		out.println("<title>Librarian Section</title>");
+		out.println("<title>Bibliotecário</title>");
 		out.println("<link rel='stylesheet' href='bootstrap.min.css'/>");
 		out.println("</head>");
 		out.println("<body>");
