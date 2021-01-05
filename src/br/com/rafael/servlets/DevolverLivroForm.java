@@ -17,7 +17,7 @@ public class DevolverLivroForm extends HttpServlet {
 		out.print("<!DOCTYPE html>");
 		out.print("<html>");
 		out.println("<head>");
-		out.println("<title>Return Book Form</title>");
+		out.println("<title>Devolver Livro</title>");
 		out.println("<link rel='stylesheet' href='bootstrap.min.css'/>");
 		out.println("</head>");
 		out.println("<body>");

@@ -77,6 +77,8 @@ public class LivroDao {
 			ResultSet rs=ps.executeQuery();
 			if(rs.next()){
 				issued=rs.getInt("emprestimo");
+			}else {
+				issued=1;
 			}
 			con.close();
 			
@@ -137,13 +139,13 @@ public class LivroDao {
 		int status=0;
 			try{
 				Connection con=DB.getCon();
-				PreparedStatement ps=con.prepareStatement("update e_issuebook set returnstatus='yes' where registro=? and estudanteid=?");
+				PreparedStatement ps=con.prepareStatement("update emprestimolivro set retornostatus='yes' where registro=? and estudanteid=?");
 				ps.setString(1,registro);
 				ps.setInt(2,estudanteid);
 				
 				status=ps.executeUpdate();
 				if(status>0){
-					PreparedStatement ps2=con.prepareStatement("update e_book set issued=? where registro=?");
+					PreparedStatement ps2=con.prepareStatement("update livro set emprestimo=? where registro=?");
 					ps2.setInt(1,getIssued(registro)-1);
 					ps2.setString(2,registro);
 					status=ps2.executeUpdate();
@@ -158,14 +160,14 @@ public class LivroDao {
 		List<EmprestimoLivroBean> list=new ArrayList<EmprestimoLivroBean>();
 		try{
 			Connection con=DB.getCon();
-			PreparedStatement ps=con.prepareStatement("select * from e_issuebook order by issueddate desc");
+			PreparedStatement ps=con.prepareStatement("select * from emprestimolivro order by emprestimodata desc");
 			ResultSet rs=ps.executeQuery();
 			while(rs.next()){
 				EmprestimoLivroBean bean=new EmprestimoLivroBean();
 				bean.setRegistro(rs.getString("registro"));
 				bean.setEstudanteid(rs.getString("estudanteid"));
 				bean.setEstudantenome(rs.getString("estudantenome"));
-				bean.setEstudantetelefone(rs.getLong("studentmobile"));
+				bean.setEstudantetelefone(rs.getLong("estudantetelefone"));
 				bean.setEmprestimodata(rs.getDate("emprestimodata"));
 				bean.setRetornostatus(rs.getString("retornostatus"));
 				list.add(bean);

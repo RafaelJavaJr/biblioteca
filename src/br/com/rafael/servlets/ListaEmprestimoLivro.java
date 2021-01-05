@@ -23,7 +23,7 @@ public class ListaEmprestimoLivro extends HttpServlet {
 		out.print("<!DOCTYPE html>");
 		out.print("<html>");
 		out.println("<head>");
-		out.println("<title>View Issued Book</title>");
+		out.println("<title>Livros Emprestados</title>");
 		out.println("<link rel='stylesheet' href='bootstrap.min.css'/>");
 		out.println("</head>");
 		out.println("<body>");
@@ -34,7 +34,7 @@ public class ListaEmprestimoLivro extends HttpServlet {
 		List<EmprestimoLivroBean> list=LivroDao.viewIssuedBooks();
 		
 		out.println("<table class='table table-bordered table-striped'>");
-		out.println("<tr><th>Callno</th><th>Student Id</th><th>Student Name</th><th>Student Mobile</th><th>Issued Date</th><th>Return Status</th></tr>");
+		out.println("<tr><th>Registro</th><th>Id do Estudante</th><th>Nome do Estudante</th><th>Telefone</th><th>Data de Empréstimo</th><th>Estatus do Retorno</th></tr>");
 		for(EmprestimoLivroBean bean:list){
 			out.println("<tr><td>"+bean.getRegistro()+"</td><td>"+bean.getEstudanteid()+"</td><td>"+bean.getEstudantenome()+"</td><td>"+bean.getEstudantetelefone()+"</td><td>"+bean.getEmprestimodata()+"</td><td>"+bean.getRetornostatus()+"</td></tr>");
 		}
