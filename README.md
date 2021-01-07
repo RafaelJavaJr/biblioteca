@@ -13,21 +13,26 @@ Seja bem vindo.
 
 # Funcionalidades
 1. Admin
-  * -Pode adicionar/editar/listar/deletar bibliotecário;
-  * -Pode deslogar;
+  * Pode adicionar/editar/listar/deletar bibliotecário;
+  * Pode deslogar;
 2. Bibliotecário
-  * -Pode adicionar/editar/deletar/listar livros;
-  * -Pode Emprestar livros;
-  * -Listar livros emprestados;
-  * -Devolver livros;
-  * -Pode deslogar;
+  * Pode adicionar/editar/deletar/listar livros;
+  * Pode Emprestar livros;
+  * Listar livros emprestados;
+  * Devolver livros;
+  * Pode deslogar;
   
 # Ferramentas usadas
 * A IDE utilizada foi o Eclipse.
 * O banco de dados foi PostgreSQL.
 
 # Front End e Back End
-1. Front End: HTML, CSS, Bootstrap
-2. Back End: Java e Servlets
+1. Front End: 
+  - HTML, 
+  - CSS, 
+  - Bootstrap;
+2. Back End: 
+  - Java e 
+  - Servlets
 
 O projeto original foi desenvolvido por: https://www.javatpoint.com/
